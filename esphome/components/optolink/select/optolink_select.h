@@ -23,8 +23,8 @@ class OptolinkSelect : public DatapointComponent, public esphome::select::Select
       this->values_.push_back(kv.second);
     }
     
-    esphome::FixedVector<const char *> opts(this->values.size());
-    for (auto &s : this->values) {
+    esphome::FixedVector<const char *> opts(this->values_.size());
+    for (auto &s : this->values_) {
       opts.push_back(s.c_str());
     }
 
